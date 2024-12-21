@@ -1,23 +1,46 @@
 pipeline {
     agent any
+
     stages {
-        stage('Clone Repository') {
+        stage('Checkout') {
             steps {
-                // Cloning the GitHub repository
-                git branch: 'main', 
-                    url: 'git@github.com/jacob-2244/git_with_jenkins.git', 
-                    credentialsId: '<your-credential-id>'
+                checkout([$class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    userRemoteConfigs: [[
+                        url: 'https://github.com/muneebahmedayub/devops-hello-world-assignment.git',
+                        credentialsId: 'github' // Replace with your credential ID
+                    ]]
+                ])
             }
         }
-        stage('Show File Content') {
+
+        stage('Build') {
             steps {
-                // List files in the repository
-                sh 'ls -la'
-                // Display a specific file (replace 'filename.html' with your file's name)
-                sh 'cat demo.html'
+                echo 'Building project...'
+                // No build step required for HTML/CSS/JS
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                sshagent(['web-server']) {
+                    sh '''
+                    # Transfer files to the Apache2 server
+                    scp -o StrictHostKeyChecking=no -r * ubuntu@13.60.223.61:/var/www/html/
+                    '''
+                }
             }
         }
     }
+
+    post {
+        success {
+            echo 'Deployment successful!'
+        }
+        failure {
+            echo 'Deployment failed!'
+        }
+    }
 }
-
-
