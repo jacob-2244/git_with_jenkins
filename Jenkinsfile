@@ -9,8 +9,7 @@ pipeline {
                     doGenerateSubmoduleConfigurations: false,
                     extensions: [],
                     userRemoteConfigs: [[
-                        url: 'https://github.com/muneebahmedayub/devops-hello-world-assignment.git',
-                        credentialsId: 'github' // Replace with your credential ID
+                        url: 'https://github.com/jacob-2244/git_with_jenkins.git'
                     ]]
                 ])
             }
@@ -25,10 +24,10 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sshagent(['web-server']) {
+                sshagent(['webserver2']) {
                     sh '''
                     # Transfer files to the Apache2 server
-                    scp -o StrictHostKeyChecking=no -r * ubuntu@13.60.223.61:/var/www/html/
+                    scp -o StrictHostKeyChecking=no -r * ubuntu@51.20.80.61:/var/www/html/
                     '''
                 }
             }
