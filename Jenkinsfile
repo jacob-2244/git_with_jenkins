@@ -10,7 +10,7 @@ pipeline {
                     doGenerateSubmoduleConfigurations: false,
                     extensions: [],
                     userRemoteConfigs: [[
-                        url: 'https://github.com/jacob-2244/first-responsive-website.git'
+                        url: 'https://github.com/jacob-2244/git_with_jenkins.git'
                     ]]
                 ])
             }
@@ -25,7 +25,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sshagent(['fyp']) {
+                sshagent(['webserver2']) {
                     sh '''
                     # Transfer files to the Apache2 server
                     scp -o StrictHostKeyChecking=no -r * ubuntu@13.60.209.181:/var/www/html/
