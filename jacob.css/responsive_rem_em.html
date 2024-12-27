@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REm</title>
+    <style>
+        html{
+            font-size: 25px;
+        }
+        .container{
+           font-size: 14px;
+            border: 2px solid red;
+            height: 100vh;
+        }
+      h1{
+        font-size: 2em;
+        padding: 3em;
+      }
+      h2{
+        /* padding: 3rem; */
+        font-size: 3rem;
+      }
+      .box{
+        text-align: center;
+        background-color: violet;
+        display: none;
+        font-size: 100px;
+      }
+      @media only screen and (max-width: 500px){
+        #box-1{
+          display: block;
+          background-color: aqua;
+        }
+
+      }
+      @media only screen and  (min-width:500px) and (max-width:600px) {
+        #box-2{
+          display: inline;
+          background-color: blue;
+
+        }
+        
+      }
+    </style>
+</head>
+<body>
+   <!-- <div class="container">
+    <h1>This is for rem and em</h1>
+    <h2>akdkajd</h2> -->
+    <div class="container2">
+      <div class="box" id="box-1">Wide screen</div>
+      <div class="box" id="box-2">Computer</div>
+      <div class="box" id="box-3">Tablet</div>
+      <div class="box" id="box-4">IPhone</div>
+    <!-- </div> -->
+   </div> 
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css grid</title>
+    <style>
+.grid{
+    display: grid;
+    grid-template-columns: 135px auto 113px;
+    grid-gap: 4rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-template-columns: repeat(autofit,minmax(300px,400px));
+}
+.item{
+   
+
+    /* width: 100px;
+    height: 100px; */
+    background-color: yellow;
+    border: 2px solid black;
+}
+.item:first-child{
+    border: 2px solid black;
+    /* grid-column-start: 1; */
+    
+    grid-column-end: 3;
+    grid-row-start: 1;
+    /* grid-row-end:  */
+}
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">Box-1</div>
+        <div class="item">Box-2</div>
+        <div class="item">Box-3</div>
+        <div class="item">Box-5</div>
+        <div class="item">Box-6</div>
+        <div class="item">Box-7</div>
+        <div class="item">Box-5</div>
+        <div class="item">Box-6</div>
+        <div class="item">Box-7</div>
+        <div class="item">Box-5</div>
+        <div class="item">Box-6</div>
+        <div class="item">Box-7</div>
+        <div class="item">Box-5</div>
+        <div class="item">Box-6</div>
+        <div class="item">Box-7</div>
+    </div>
+</body>
+</html>

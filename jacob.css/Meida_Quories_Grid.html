@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+        grid-template-areas: 
+        'nav nav nav nav'
+        'section section section aside'
+         'footer footer footer footer'; }
+        @media  only screen and (min-width:300px)and (max-width:500px){
+            body{
+                background-color: red;
+            }
+            .container {
+        grid-template-areas: 
+        'nav nav nav nav'
+        'section section section section'
+        'aside aside aside aside'
+         'footer footer footer footer'; }
+         aside{
+            display: none;
+         }
+         footer{
+            text-align: center;
+         }
+         span{
+            display: block;
+            text-align: center;
+         }
+        
+
+           
+        }
+        @media only screen and (min-width:500px)and (max-width:700px){
+            body{
+                background-color: blue;
+            }
+            .container {
+        grid-template-areas: 
+        'nav nav nav nav'
+        'section section section section'
+        'aside aside aside aside'
+         'footer footer footer footer'; }
+
+
+        }
+        @media only screen and (min-width:700px)and (max-width:900px){
+            body{
+                background-color: rgb(194, 228, 199);
+            }
+        }
+        @media only screen and (min-width:900px){
+            body{
+                background-color: green;
+            }
+        }
+        .bdn{
+            padding: 23px;
+            border: 2px solid black;
+            background-color: wheat;
+            
+        }
+        nav{
+            grid-area: nav;
+        }
+        section{
+            grid-area: section;
+        }
+        aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="bdn">
+        <span> Home </span>
+        <span> About </span>
+        <span> Services </span>
+        <span> Contact </span>
+    </nav>
+    <aside class="bdn" id="item"><h1>More About Us</h1></aside>
+    <section class="bdn"><h2>Learn CSS</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi molestiae voluptas iusto facilis aliquid qui, dolor odit tenetur nesciunt est. Dolorem fugit aspernatur placeat aut officiis quibusdam libero culpa necessitatibus eveniet officia, dolores doloribus corporis laboriosam odio delectus consectetur ex suscipit nobis magnam consequatur veniam magni velit voluptatem? Totam quis aperiam ex deleniti unde vero quidem molestias modi deserunt, veniam nulla, voluptate obcaecati fuga quos? Necessitatibus iure, laboriosam quis modi soluta animi. Fugiat laboriosam cumque, animi soluta officiis odio minima placeat ab. Reprehenderit consectetur harum deserunt, commodi similique necessitatibus consequuntur at, cupiditate nemo rem fugit. Expedita iste natus facilis! Eligendi provident reiciendis debitis qui eaque facere atque soluta repellendus nobis et explicabo repudiandae, perspiciatis nesciunt voluptates dolor. Recusandae eos odit beatae fugit?</p></section>
+  </div>
+  <footer class="bdn">
+    Jacob Copyright &copy;
+  </footer>
+</body>
+</html>

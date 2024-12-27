@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root{
+            --mycolor: rgb(67, 50, 67);
+            --maxw:333px;
+
+        }
+        .container {
+            width: 2000px;
+
+            height: 300px;
+            background-color: var(--mycolor);
+            border: 2px solid yellow;
+
+           
+        }
+
+        .box {
+           
+            width: 111px;
+            height: 60px;
+            /* background-color: blue; */
+            border: 2px solid red;
+            margin: auto;
+            display: block;
+            background-color: turquoise;
+            width: var(--maxw);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

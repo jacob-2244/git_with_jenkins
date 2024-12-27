@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: yellow;
+        }
+.box:hover{
+    background-color: chartreuse;
+    border-radius: 23px;
+    width: 100px;
+}
+        .box {
+            position: relative;
+            animation-name: jacob2;
+            /* animation-name: jacob; */
+            animation-duration: 2s;
+            animation-delay: 3;
+            width: 127px;
+            animation-iteration-count: 4;
+            background-color: blue;
+            animation-fill-mode: forwards;
+            height: 100px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            animation-timing-function: ease-out;
+        transition: width 1s ;}
+
+            @keyframes jacob {
+                from {
+                    width: 244px;
+
+                }
+
+                to {
+                    width: 400px;
+                }
+
+
+            }
+
+            @keyframes jacob2 {
+                25% {
+                    top: 250px;
+                    left: 0px;
+                   
+                    box-shadow: 12px 12px rgb(188, 183, 183);
+
+                }
+
+                50% {
+                    top: 250px;
+                    left: 250px;
+
+                }
+
+                75% {
+                    top: 0px;
+                    left: 250px;
+                }
+
+                100% {
+                    top: 0px;
+                    left: 0px;
+                    box-shadow: 2px 2px rgb(219, 214, 214);
+
+                }
+
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+
+</html>

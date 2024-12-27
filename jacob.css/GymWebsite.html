@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+    <style>
+        body {
+            z-index: -1;
+            color: white;
+            background-image: url('img/image.jpg');
+            width: 1510px;
+            height: 1200px;
+            font-family: 'Mukta', sans-serif;
+            font-family: 'Unbounded', cursive;
+
+
+        }
+
+        .left {
+            position: absolute;
+            left: 60px;
+            top: 25px;
+            /* border: 2px solid red; */
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+
+
+        }
+
+        .mid {
+            width: 400px;
+            /* border: 2px solid green; */
+            margin: 25px auto;
+
+        }
+
+        .right {
+            /* border: 2px solid white; */
+            display: inline-block;
+            float: right;
+            top: 25px;
+            position: absolute;
+            right: 34px;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 4px 4px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: gray;
+            text-decoration: underline;
+        }
+
+        .left img {
+            filter: invert(100%);
+            width: 99px;
+
+
+        }
+
+        .text {
+            text-align: center;
+            line-height: 8px;
+        }
+
+        .btn {
+            padding: 2px 2px;
+            margin: 2px 2px;
+            /* border: 2px solid rgb(190, 190, 190); */
+            border-radius: 3px;
+        }
+
+        .btn:hover {
+            background-color: grey;
+            cursor: pointer;
+        }
+
+        .container {
+            position: absolute;
+            left: 297px;
+            /* border: 2px solid green; */
+            display: block;
+            width: 401px;
+            top: 188px;
+         
+
+        }
+
+        .form_group input {
+            text-align: center;
+            display: block;
+            width: 253px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 5px 1px;
+            font-size: 18px;
+            font-family: 'Mukta', sans-serif;
+            font-family: 'Unbounded', cursive;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        .container button {
+            height: 44px;
+            color: black;
+            width: 91px;
+            display: block;
+            margin: 4px auto;
+            font-weight: bold;
+            background-color: #7c7c7c;
+            font-size: larger;
+        
+
+
+        }
+
+        .container button:hover {
+            color: white;
+            background-color: rgb(19, 18, 18);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logojpg.jpg" alt="">
+            <div class="text">
+                Jacob's Fitness
+            </div>
+        </div>
+
+        <div class="mid">
+            <div class="navbar">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Fit Calculator</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <buttton class="btn">Contact</buttton>
+            <buttton class="btn">Email</buttton>
+
+        </div>
+    </header>
+    <div class="container">
+        <form action="noaction.php">
+            <h1>Welcome to JCB GYm</h1>
+            <div class="form_group">
+                <div>
+                    <input type="text" placeholder="Enter your Name">
+                </div>
+                <div><input type="text" placeholder="Enter your Age"></div>
+                <div><input type="text" placeholder="Enter your Gender"></div>
+                <div> <input type="text" placeholder="Enter your Sector Name"></div>
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
